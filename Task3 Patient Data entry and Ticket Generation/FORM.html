@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>FORM</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+	<style type="text/css">
+		
+	</style>
+	<script type="text/javascript">
+		
+	</script>
+</head>
+<body>
+	<div class="container">
+	<br><center><h3><u>FORM</u> <u>Details</u></h3></center><br>
+	<form id="form" action="">
+		<div class="form-group row">
+			<div class="col-2"><label for="name">Name :</label></div>
+		    <div class="col-10"><input type="text" class="form-control" placeholder="Enter name" id="name"></div>
+		</div>
+		<div class="form-group row">
+			<div class="col-2"><label for="fname">Father's Name :</label></div>
+		    <div class="col-10"><input type="text" class="form-control" placeholder="Enter father's name" id="fname"></div>
+		</div>
+		<div class="form-group row">
+			<div class="col-2"><label for="dob">Date Of Birth :</label></div>
+		    <div class="col-10"><input type="text" class="form-control" placeholder="DD/MM/YYYY" id="dob"></div>
+		</div>
+		<div class="form-group row">
+			<div class="col-2"><label for="date">Date :</label></div>
+		    <div class="col-10">
+		       <div class="input-group">
+		        <div class="input-group-addon">
+		         <i class="fa fa-calendar">
+		         </i>
+		        </div>
+		        <input class="form-control" id="date" name="date" placeholder="DD/MM/YYYY" type="text"/>
+		       </div>
+		      </div>
+		</div>
+		<div class="form-group row">
+		  <div class="col-2"><label for="department">Department :</label></div>
+		  <div class="col-10"><select class="form-control" id="department">
+		    <option>Department A</option>
+		    <option>Department B</option>
+		    <option>Department C</option>
+		    <option>Department D</option>
+		  </select></div>
+		</div>
+		<div class="form-group row">
+		  <div class="col-2"><label for="doctor">Doctor's Name :</label></div>
+		  <div class="col-10"><select class="form-control" id="doctor">
+		    <option>Doctor 1</option>
+		    <option>Doctor 2</option>
+		    <option>Doctor 3</option>
+		    <option>Doctor 4</option>
+		  </select></div>
+		</div>
+		<div class="form-group row">
+		  <div class="col-2"><label for="room">Department Room No.</label></div>
+		  <div class="col-10"><select class="form-control" id="room">
+		    <option>Room 1</option>
+		    <option>Room 2</option>
+		    <option>Room 3</option>
+		    <option>Room 4</option>
+		  </select></div>
+		</div>
+		<div class="form-group row">
+			<div class="col-2"><label for="contact">Contact Number :</label></div>
+		    <div class="col-10"><input type="text" class="form-control" placeholder="Enter contact number" id="contact"></div>
+		</div>
+		<div class="form-group row">
+			<div class="col-2"><label for="address">Address :</label></div>
+		    <div class="col-10"><input type="text" class="form-control" placeholder="Enter address" id="address"></div>
+		</div>
+		<div class="form-group">
+			<center><button type="button" class="btn btn-info">Submit</button></center>
+		</div>
+	</form>
+	</div>
+<!-- For Datepicker -->
+<script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+
+<!-- Include Date Range Picker -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/js/bootstrap-datepicker.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/css/bootstrap-datepicker3.css"/>
+
+<script>
+	$(document).ready(function(){
+		var date_input=$('input[name="date"]'); //our date input has the name "date"
+		var container=$('.bootstrap-iso form').length>0 ? $('.bootstrap-iso form').parent() : "body";
+		date_input.datepicker({
+			format: 'dd/mm/yyyy',
+			container: container,
+			todayHighlight: true,
+			autoclose: true,
+		})
+	})
+</script>
+
+</body>
+</html>
